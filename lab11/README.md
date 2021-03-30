@@ -5,6 +5,7 @@
 
 ## Task 2
 **Filter:** `{}`
+
 **Project:** 
 `{
     restaurant_id: 1,
@@ -12,3 +13,8 @@
     borough: 1,
     cuisine: 1
 }`
+
+## Task 3
+**Filter:** `borough: "Bronx"`
+
+**Limit:** 5
