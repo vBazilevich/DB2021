@@ -23,10 +23,27 @@
 **Filter:**
 ```
 { $or: [
-    {cuisine: {$nin: [/American*/, /Chinese/]}},
+    {
+      cuisine: { $not: {$regex: /American\s*/}, $not: {$regex: /Chinese/}},
+    }, 
     {name: {$regex: /^Wil/}}
   ]
 }
 ```
 
 **Project:** `{restaurant_id:1, name: 1, cuisine: 1, borough: 1}`
+
+## Task 5
+**Filter:** 
+```
+{
+    name: {
+        $regex: /mon/
+    }
+}
+```
+
+**Project:**
+```
+{"address.coords":1, name: 1, cuisine: 1, borough: 1}
+```
