@@ -47,3 +47,14 @@
 ```
 {"address.coords":1, name: 1, cuisine: 1, borough: 1}
 ```
+
+## Task 6
+**Filter:**
+```
+{
+  borough: {
+    $in: ['Bronx', 'Brooklyn', 'Staten Island', 'Queens']
+    
+  }
+}
+```
