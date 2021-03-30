@@ -18,3 +18,15 @@
 **Filter:** `borough: "Bronx"`
 
 **Limit:** 5
+
+## Task 4
+**Filter:**
+```
+{ $or: [
+    {cuisine: {$nin: [/American*/, /Chinese/]}},
+    {name: {$regex: /^Wil/}}
+  ]
+}
+```
+
+**Project:** `{restaurant_id:1, name: 1, cuisine: 1, borough: 1}`
